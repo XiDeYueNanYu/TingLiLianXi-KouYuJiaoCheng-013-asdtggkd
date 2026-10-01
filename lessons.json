@@ -1,193 +1,193 @@
 [
-{
+ {
   "id": "Bai-1",
   "title": "Bài 1: Xin Chào",
   "sentences": [
-    {
-      "audio": "xin_looxi_anh_cos_bieest_phofng_hojp_soos_2_owr_ddaau_khoong.mp3",
-      "vi": "Xin lỗi, anh có biết phòng họp số 2 ở đâu không?",
-      "zh": "请问您知道 2 号会议室在哪里吗？"
-    },
-    {
-      "audio": "xin_cho_tooi_hori_dduwowfng_ra_beesn_xe_buyst_gaafn_nhaast.mp3",
-      "vi": "Xin cho tôi hỏi đường ra bến xe buýt gần nhất.",
-      "zh": "请问去最近的公交车站怎么走？"
-    },
-    {
-      "audio": "thuwa_basc_basc_thawsng_cos_nhaf_khoong_aj.mp3",
-      "vi": "Thưa bác, bác Thắng có nhà không ạ?",
-      "zh": "请问，胜大爷在家吗？"
-    },
-    {
-      "audio": "xin_hori_chij_mai_maasy_giowf_xe_xuaast_phast.mp3",
-      "vi": "Xin hỏi chị, Mai mấy giờ xe xuất phát?",
-      "zh": "请问，车几点出发？"
-    },
-    {
-      "audio": "xin_hori_quaafy_lafm_thur_tujc_owr_ddaau.mp3",
-      "vi": "Xin hỏi, quầy làm thủ tục ở đâu?",
-      "zh": "请问，值机柜台在哪里？"
-    },
-    {
-      "audio": "cho_tooi_hori_nhaf_veej_sinh_owr_ddaau.mp3",
-      "vi": "Cho tôi hỏi, nhà vệ sinh ở đâu?",
-      "zh": "请问，洗手间在哪里？"
-    },
-    {
-      "audio": "xin_hori_tooi_cos_theer_ddoox_xe_owr_ddaau.mp3",
-      "vi": "Xin hỏi, tôi có thể đỗ xe ở đâu?",
-      "zh": "请问，我可以在哪里停车？"
-    },
-    {
-      "audio": "basc_cho_hori_hieeju_thuoosc_owr_ddaau_aj.mp3",
-      "vi": "bác cho hỏi, hiệu thuốc ở đâu ạ?",
-      "zh": "请问，药店在哪里？"
-    },
-    {
-      "audio": "anh_cho_hori_cos_beejnh_vieejn_nafo_owr_gaafn_ddaay_khoong.mp3",
-      "vi": "Anh cho hỏi, có bệnh viện nào ở gần đây không?",
-      "zh": "请问，附近有医院吗？"
-    },
-    {
-      "audio": "anh_sang_vieejt_nam_ddeer_coong_tasc_phari_khoong.mp3",
-      "vi": "Anh sang Việt Nam để công tác, phải không?",
-      "zh": "您是来越南出差的，对吗？"
-    },
-    {
-      "audio": "chij_laf_giasm_ddoosc_phari_khoong.mp3",
-      "vi": "Chị là giám đốc, phải không?",
-      "zh": "您是经理，对吗？"
-    },
-    {
-      "audio": "cuoojc_hojp_sex_bawst_ddaafu_lusc_9_giowf_sasng_phari_khoong.mp3",
-      "vi": "Cuộc họp sẽ bắt đầu lúc 9 giờ sáng, phải không?",
-      "zh": "会议将于上午 9 点开始，对吗？"
-    },
-    {
-      "audio": "tuwf_khasch_sajn_ddeesn_baxi_bieern_maast_khoarng_15_phust_ddi_booj.mp3",
-      "vi": "Từ khách sạn đến bãi biển mất khoảng 15 phút đi bộ.",
-      "zh": "从酒店步行到海滩大约需要 15 分钟。"
-    },
-    {
-      "audio": "tuwf_haf_nooji_ddeesn_hari_phofng_chajy_xe_oo_too_maast_bao_laau.mp3",
-      "vi": "Từ Hà Nội đến Hải Phòng chạy xe ô tô mất bao lâu?",
-      "zh": "从河内开车到海防需要多长时间？"
-    },
-    {
-      "audio": "tuwf_nhaf_tooi_ddeesn_coong_ty_khoarng_5_caay_soos.mp3",
-      "vi": "Từ nhà tôi đến công ty khoảng 5 cây số.",
-      "zh": "从我家到公司大约 5 公里。"
-    },
-    {
-      "audio": "tuwf_hoom_nay_ddeesn_ngafy_giao_hafng_chir_cofn_2_tuaafn.mp3",
-      "vi": "Từ hôm nay đến ngày giao hàng chỉ còn 2 tuần.",
-      "zh": "从今天到交货日只剩 2 周了。"
-    },
-    {
-      "audio": "tuwf_trung_taam_thafnh_phoos_ddeesn_saan_bay_maast_khoarng_40_phust_ddi_taxi.mp3",
-      "vi": "Từ trung tâm thành phố đến sân bay mất khoảng 40 phút đi taxi.",
-      "zh": "从市中心坐出租车到机场大约需要 40 分钟。"
-    },
-    {
-      "audio": "tooi_sang_vieejt_nam_coong_tasc.mp3",
-      "vi": "Tôi sang Việt Nam công tác.",
-      "zh": "我来越南出差。"
-    },
-    {
-      "audio": "anh_aasy_ddeesn_ddaf_nawxng_ddeer_tham_duwj_hooji_tharo_du_lijch.mp3",
-      "vi": "Anh ấy đến Đà Nẵng để tham dự hội thảo du lịch.",
-      "zh": "他去岘港参加旅游研讨会。"
-    },
-    {
-      "audio": "gia_ddifnh_tooi_ddi_ddaf_lajt_ddeer_nghir_duwowxng_cuoosi_tuaafn.mp3",
-      "vi": "Gia đình tôi đi Đà Lạt để nghỉ dưỡng cuối tuần.",
-      "zh": "我家去大叻周末度假。"
-    },
-    {
-      "audio": "xin_cho_tooi_xin_moojt_ly_caf_phee_ist_dduwowfng.mp3",
-      "vi": "Xin cho tôi xin một ly cà phê ít đường.",
-      "zh": "请给我来一杯少糖的咖啡。"
-    },
-    {
-      "audio": "cho_tooi_mua_moojt_ist_thuoosc_carm_soost.mp3",
-      "vi": "Cho tôi mua một ít thuốc cảm sốt.",
-      "zh": "请给我买一些感冒药。"
-    },
-    {
-      "audio": "xin_anh_xuaast_trifnh_hooj_chieesu_vaf_ves_masy_bay.mp3",
-      "vi": "Xin anh xuất trình hộ chiếu và vé máy bay.",
-      "zh": "请您出示护照和机票。"
-    },
-    {
-      "audio": "xin_quys_khasch_haxy_thawst_daay_an_toafn_ddeer_ddarm_baro_an_toafn.mp3",
-      "vi": "Xin quý khách hãy thắt dây an toàn để đảm bảo an toàn.",
-      "zh": "为了确保安全，请各位乘客系好安全带。"
-    },
-    {
-      "audio": "cho_tooi_ddoori_sang_moojt_chieesc_chawn_aasm_hown.mp3",
-      "vi": "Cho tôi đổi sang một chiếc chăn ấm hơn.",
-      "zh": "请给我换一条更暖和的毯子。"
-    },
-    {
-      "audio": "anh_cho_tooi_guwri_xe.mp3",
-      "vi": "Anh cho tôi gửi xe.",
-      "zh": "麻烦帮我停车。"
-    },
-    {
-      "audio": "tooi_muoosn_guwri_tieest_kieejm_kyf_hajn_6_thasng.mp3",
-      "vi": "Tôi muốn gửi tiết kiệm kỳ hạn 6 tháng.",
-      "zh": "我想存 6 个月的定期存款。"
-    },
-    {
-      "audio": "cho_tooi_guwri_lowfi_chusc_suwsc_khore_ddeesn_toafn_theer_gia_ddifnh_anh.mp3",
-      "vi": "Cho tôi gửi lời chúc sức khỏe đến toàn thể gia đình anh.",
-      "zh": "祝您全家身体健康。"
-    },
-    {
-      "audio": "em_xin_guwri_laji_anh_soos_tieefn_hoom_qua_em_ddax_muwowjn.mp3",
-      "vi": "Em xin gửi lại anh số tiền hôm qua em đã mượn.",
-      "zh": "我把昨天借您的钱还给您。"
-    },
-    {
-      "audio": "cho_tooi_guwri_chifa_khosa_phofng.mp3",
-      "vi": "Cho tôi gửi chìa khóa phòng.",
-      "zh": "请帮我保管一下房间钥匙。"
-    },
-    {
-      "audio": "em_guwri_baso_caso_coong_vieejc_cho_giasm_ddoosc_nhes.mp3",
-      "vi": "Em gửi báo cáo công việc cho giám đốc nhé.",
-      "zh": "我把工作报告发给经理了。"
-    },
-    {
-      "audio": "anh_ddax_hojc_tieesng_vieejt_dduwowjc_bao_nhieeu_nawm_roofi.mp3",
-      "vi": "Anh đã học tiếng Việt được bao nhiêu năm rồi?",
-      "zh": "你学越南语多少年了？"
-    },
-    {
-      "audio": "phofng_khasch_sajn_nafy_moojt_ddeem_gias_bao_nhieeu_tieefn.mp3",
-      "vi": "Phòng khách sạn này một đêm giá bao nhiêu tiền?",
-      "zh": "这个酒店房间一晚多少钱？"
-    },
-    {
-      "audio": "basc_cos_maasy_nguwowfi_con_ddang_lafm_vieejc_owr_haf_nooji.mp3",
-      "vi": "Bác có mấy người con đang làm việc ở Hà Nội?",
-      "zh": "您有几个孩子在河内工作？"
-    },
-    {
-      "audio": "tooi_thaasy_howi_meejt.mp3",
-      "vi": "Tôi thấy hơi mệt.",
-      "zh": "我觉得有点累。"
-    },
-    {
-      "audio": "tooi_carm_thaasy_howi_chosng_mawjt.mp3",
-      "vi": "Tôi cảm thấy hơi chóng mặt.",
-      "zh": "我觉得有点头晕。"
-    },
-    {
-      "audio": "em_thaasy_howi_lajnh_xin_chij_cho_em_muwowjn_casi_aso_khoasc.mp3",
-      "vi": "Em thấy hơi lạnh, xin chị cho em mượn cái áo khoác.",
-      "zh": "我觉得有点冷，请借我一件外套。"
-    }
+   {
+    "audio": "xin_looxi_anh_cos_bieest_phofng_hojp_soos_2_owr_ddaau_khoong.mp3",
+    "vi": "Xin lỗi, anh có biết phòng họp số 2 ở đâu không?",
+    "zh": "请问您知道 2 号会议室在哪里吗？"
+   },
+   {
+    "audio": "xin_cho_tooi_hori_dduwowfng_ra_beesn_xe_buyst_gaafn_nhaast.mp3",
+    "vi": "Xin cho tôi hỏi đường ra bến xe buýt gần nhất.",
+    "zh": "请问去最近的公交车站怎么走？"
+   },
+   {
+    "audio": "thuwa_basc_basc_thawsng_cos_nhaf_khoong_aj.mp3",
+    "vi": "Thưa bác, bác Thắng có nhà không ạ?",
+    "zh": "请问，胜大爷在家吗？"
+   },
+   {
+    "audio": "xin_hori_chij_mai_maasy_giowf_xe_xuaast_phast.mp3",
+    "vi": "Xin hỏi chị, Mai mấy giờ xe xuất phát?",
+    "zh": "请问，车几点出发？"
+   },
+   {
+    "audio": "xin_hori_quaafy_lafm_thur_tujc_owr_ddaau.mp3",
+    "vi": "Xin hỏi, quầy làm thủ tục ở đâu?",
+    "zh": "请问，值机柜台在哪里？"
+   },
+   {
+    "audio": "cho_tooi_hori_nhaf_veej_sinh_owr_ddaau.mp3",
+    "vi": "Cho tôi hỏi, nhà vệ sinh ở đâu?",
+    "zh": "请问，洗手间在哪里？"
+   },
+   {
+    "audio": "xin_hori_tooi_cos_theer_ddoox_xe_owr_ddaau.mp3",
+    "vi": "Xin hỏi, tôi có thể đỗ xe ở đâu?",
+    "zh": "请问，我可以在哪里停车？"
+   },
+   {
+    "audio": "basc_cho_hori_hieeju_thuoosc_owr_ddaau_aj.mp3",
+    "vi": "bác cho hỏi, hiệu thuốc ở đâu ạ?",
+    "zh": "请问，药店在哪里？"
+   },
+   {
+    "audio": "anh_cho_hori_cos_beejnh_vieejn_nafo_owr_gaafn_ddaay_khoong.mp3",
+    "vi": "Anh cho hỏi, có bệnh viện nào ở gần đây không?",
+    "zh": "请问，附近有医院吗？"
+   },
+   {
+    "audio": "anh_sang_vieejt_nam_ddeer_coong_tasc_phari_khoong.mp3",
+    "vi": "Anh sang Việt Nam để công tác, phải không?",
+    "zh": "您是来越南出差的，对吗？"
+   },
+   {
+    "audio": "chij_laf_giasm_ddoosc_phari_khoong.mp3",
+    "vi": "Chị là giám đốc, phải không?",
+    "zh": "您是经理，对吗？"
+   },
+   {
+    "audio": "cuoojc_hojp_sex_bawst_ddaafu_lusc_9_giowf_sasng_phari_khoong.mp3",
+    "vi": "Cuộc họp sẽ bắt đầu lúc 9 giờ sáng, phải không?",
+    "zh": "会议将于上午 9 点开始，对吗？"
+   },
+   {
+    "audio": "tuwf_khasch_sajn_ddeesn_baxi_bieern_maast_khoarng_15_phust_ddi_booj.mp3",
+    "vi": "Từ khách sạn đến bãi biển mất khoảng 15 phút đi bộ.",
+    "zh": "从酒店步行到海滩大约需要 15 分钟。"
+   },
+   {
+    "audio": "tuwf_haf_nooji_ddeesn_hari_phofng_chajy_xe_oo_too_maast_bao_laau.mp3",
+    "vi": "Từ Hà Nội đến Hải Phòng chạy xe ô tô mất bao lâu?",
+    "zh": "从河内开车到海防需要多长时间？"
+   },
+   {
+    "audio": "tuwf_nhaf_tooi_ddeesn_coong_ty_khoarng_5_caay_soos.mp3",
+    "vi": "Từ nhà tôi đến công ty khoảng 5 cây số.",
+    "zh": "从我家到公司大约 5 公里。"
+   },
+   {
+    "audio": "tuwf_hoom_nay_ddeesn_ngafy_giao_hafng_chir_cofn_2_tuaafn.mp3",
+    "vi": "Từ hôm nay đến ngày giao hàng chỉ còn 2 tuần.",
+    "zh": "从今天到交货日只剩 2 周了。"
+   },
+   {
+    "audio": "tuwf_trung_taam_thafnh_phoos_ddeesn_saan_bay_maast_khoarng_40_phust_ddi_taxi.mp3",
+    "vi": "Từ trung tâm thành phố đến sân bay mất khoảng 40 phút đi taxi.",
+    "zh": "从市中心坐出租车到机场大约需要 40 分钟。"
+   },
+   {
+    "audio": "tooi_sang_vieejt_nam_coong_tasc.mp3",
+    "vi": "Tôi sang Việt Nam công tác.",
+    "zh": "我来越南出差。"
+   },
+   {
+    "audio": "anh_aasy_ddeesn_ddaf_nawxng_ddeer_tham_duwj_hooji_tharo_du_lijch.mp3",
+    "vi": "Anh ấy đến Đà Nẵng để tham dự hội thảo du lịch.",
+    "zh": "他去岘港参加旅游研讨会。"
+   },
+   {
+    "audio": "gia_ddifnh_tooi_ddi_ddaf_lajt_ddeer_nghir_duwowxng_cuoosi_tuaafn.mp3",
+    "vi": "Gia đình tôi đi Đà Lạt để nghỉ dưỡng cuối tuần.",
+    "zh": "我家去大叻周末度假。"
+   },
+   {
+    "audio": "xin_cho_tooi_xin_moojt_ly_caf_phee_ist_dduwowfng.mp3",
+    "vi": "Xin cho tôi xin một ly cà phê ít đường.",
+    "zh": "请给我来一杯少糖的咖啡。"
+   },
+   {
+    "audio": "cho_tooi_mua_moojt_ist_thuoosc_carm_soost.mp3",
+    "vi": "Cho tôi mua một ít thuốc cảm sốt.",
+    "zh": "请给我买一些感冒药。"
+   },
+   {
+    "audio": "xin_anh_xuaast_trifnh_hooj_chieesu_vaf_ves_masy_bay.mp3",
+    "vi": "Xin anh xuất trình hộ chiếu và vé máy bay.",
+    "zh": "请您出示护照和机票。"
+   },
+   {
+    "audio": "xin_quys_khasch_haxy_thawst_daay_an_toafn_ddeer_ddarm_baro_an_toafn.mp3",
+    "vi": "Xin quý khách hãy thắt dây an toàn để đảm bảo an toàn.",
+    "zh": "为了确保安全，请各位乘客系好安全带。"
+   },
+   {
+    "audio": "cho_tooi_ddoori_sang_moojt_chieesc_chawn_aasm_hown.mp3",
+    "vi": "Cho tôi đổi sang một chiếc chăn ấm hơn.",
+    "zh": "请给我换一条更暖和的毯子。"
+   },
+   {
+    "audio": "anh_cho_tooi_guwri_xe.mp3",
+    "vi": "Anh cho tôi gửi xe.",
+    "zh": "麻烦帮我停车。"
+   },
+   {
+    "audio": "tooi_muoosn_guwri_tieest_kieejm_kyf_hajn_6_thasng.mp3",
+    "vi": "Tôi muốn gửi tiết kiệm kỳ hạn 6 tháng.",
+    "zh": "我想存 6 个月的定期存款。"
+   },
+   {
+    "audio": "cho_tooi_guwri_lowfi_chusc_suwsc_khore_ddeesn_toafn_theer_gia_ddifnh_anh.mp3",
+    "vi": "Cho tôi gửi lời chúc sức khỏe đến toàn thể gia đình anh.",
+    "zh": "祝您全家身体健康。"
+   },
+   {
+    "audio": "em_xin_guwri_laji_anh_soos_tieefn_hoom_qua_em_ddax_muwowjn.mp3",
+    "vi": "Em xin gửi lại anh số tiền hôm qua em đã mượn.",
+    "zh": "我把昨天借您的钱还给您。"
+   },
+   {
+    "audio": "cho_tooi_guwri_chifa_khosa_phofng.mp3",
+    "vi": "Cho tôi gửi chìa khóa phòng.",
+    "zh": "请帮我保管一下房间钥匙。"
+   },
+   {
+    "audio": "em_guwri_baso_caso_coong_vieejc_cho_giasm_ddoosc_nhes.mp3",
+    "vi": "Em gửi báo cáo công việc cho giám đốc nhé.",
+    "zh": "我把工作报告发给经理了。"
+   },
+   {
+    "audio": "anh_ddax_hojc_tieesng_vieejt_dduwowjc_bao_nhieeu_nawm_roofi.mp3",
+    "vi": "Anh đã học tiếng Việt được bao nhiêu năm rồi?",
+    "zh": "你学越南语多少年了？"
+   },
+   {
+    "audio": "phofng_khasch_sajn_nafy_moojt_ddeem_gias_bao_nhieeu_tieefn.mp3",
+    "vi": "Phòng khách sạn này một đêm giá bao nhiêu tiền?",
+    "zh": "这个酒店房间一晚多少钱？"
+   },
+   {
+    "audio": "basc_cos_maasy_nguwowfi_con_ddang_lafm_vieejc_owr_haf_nooji.mp3",
+    "vi": "Bác có mấy người con đang làm việc ở Hà Nội?",
+    "zh": "您有几个孩子在河内工作？"
+   },
+   {
+    "audio": "tooi_thaasy_howi_meejt.mp3",
+    "vi": "Tôi thấy hơi mệt.",
+    "zh": "我觉得有点累。"
+   },
+   {
+    "audio": "tooi_carm_thaasy_howi_chosng_mawjt.mp3",
+    "vi": "Tôi cảm thấy hơi chóng mặt.",
+    "zh": "我觉得有点头晕。"
+   },
+   {
+    "audio": "em_thaasy_howi_lajnh_xin_chij_cho_em_muwowjn_casi_aso_khoasc.mp3",
+    "vi": "Em thấy hơi lạnh, xin chị cho em mượn cái áo khoác.",
+    "zh": "我觉得有点冷，请借我一件外套。"
+   }
   ]
-}
+ }
 ]

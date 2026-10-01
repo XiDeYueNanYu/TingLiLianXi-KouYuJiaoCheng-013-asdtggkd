@@ -65,7 +65,7 @@ button:disabled{opacity:.5;pointer-events:none}
 <section id="v-test" class="view">
   <div id="tclock">⏱ 00:00</div>
   <div id="tq"></div>
-  <div style="margin:10px 0"><button id="tPlay">🔁 Nghe lại</button></div>
+  <div style="margin:10px 0"><button id="tPlay">🔁 再听听</button></div>
   <div id="topts"></div>
   <div id="tdone"><div id="tscore"></div><button id="sendBtn">下载并发送结果报告</button><button id="retryBtn" style="background:var(--blue);border-color:var(--blue)">Làm lại</button><div id="smsg"></div></div>
 </section>
@@ -275,16 +275,16 @@ async function sendVika(r) {
 }
 $("sendBtn").onclick = async () => {
   const btn = $("sendBtn"), msg = $("smsg"), r = buildReport();
-  btn.disabled = true; msg.style.color = "#1f4263"; msg.textContent = "⏳ Đang gửi...";
+  btn.disabled = true; msg.style.color = "#1f4263"; msg.textContent = "⏳ 正在下载数据...";
   if (!T.failed) {
     try { const a = document.createElement("a"); a.href = drawReport(r); a.download = `baocao_${r.student}_${r.lessonId}.png`.replace(/\s+/g, "_"); document.body.appendChild(a); a.click(); a.remove() } catch (e) { console.error(e) }
   }
   try {
     await sendVika(r); T.failed = false;
-    msg.style.color = "var(--ok)"; msg.textContent = "✅ Đã tải ảnh và gửi kết quả cho giáo viên!";
+    msg.style.color = "var(--ok)"; msg.textContent = "✅ 完成!";
   } catch (e) {
-    T.failed = true; msg.style.color = "var(--bad)"; msg.textContent = "❌ Gửi lỗi: " + e.message + ". Hãy bấm gửi lại.";
-    btn.textContent = "Gửi lại kết quả";
+    T.failed = true; msg.style.color = "var(--bad)"; msg.textContent = "❌ 发送未完成: " + e.message + ". 请再按重新发送.";
+    btn.textContent = "重新发送";
   }
   btn.disabled = false;
 };

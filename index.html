@@ -47,13 +47,13 @@ button:disabled{opacity:.5;pointer-events:none}
 </head>
 <body>
 <div id="title" class="box">Luyện nghe tiếng Việt<br>越南语听力练习</div>
-<div id="bar" class="box"><span id="who"></span><span><button class="sm" id="backBtn">◀ Quay lại</button><button class="sm" id="swapBtn">Đổi người</button></span></div>
+<div id="bar" class="box"><span id="who"></span><span><button class="sm" id="backBtn">◀ 返回</button><button class="sm" id="swapBtn">换人</button></span></div>
 
 <section id="v-students" class="view"><h3>Chọn tên của bạn · 请选择你的名字</h3><div id="studentList"></div></section>
-<section id="v-lessons" class="view"><div id="lessonList">Đang tải...</div></section>
+<section id="v-lessons" class="view"><div id="lessonList">正在下载数据...</div></section>
 <section id="v-menu" class="view"><h3 id="menuTitle"></h3>
-  <button class="item" id="goFree">🎧 Luyện tự do<small>Nghe và xếp từ thành câu</small></button>
-  <button class="item" id="goTest">📝 Bài tập<small>Nghe và chọn bản dịch tiếng Trung, có tính giờ</small></button></section>
+  <button class="item" id="goFree">🎧 自由练习<small>听后排列</small></button>
+  <button class="item" id="goTest">📝 做作业<small>听后选择正确翻译, 有计时</small></button></section>
 
 <section id="v-free" class="view">
   <div class="hint" id="fzh"></div>
@@ -67,12 +67,12 @@ button:disabled{opacity:.5;pointer-events:none}
   <div id="tq"></div>
   <div style="margin:10px 0"><button id="tPlay">🔁 Nghe lại</button></div>
   <div id="topts"></div>
-  <div id="tdone"><div id="tscore"></div><button id="sendBtn">Tải ảnh báo cáo và gửi kết quả luyện tập</button><button id="retryBtn" style="background:var(--blue);border-color:var(--blue)">Làm lại</button><div id="smsg"></div></div>
+  <div id="tdone"><div id="tscore"></div><button id="sendBtn">下载并发送结果报告</button><button id="retryBtn" style="background:var(--blue);border-color:var(--blue)">Làm lại</button><div id="smsg"></div></div>
 </section>
 
 <div class="dock" id="dFree">
-  <button id="fPrev">◀</button><input id="fnum" inputmode="numeric"><button id="fNext">▶</button><button id="fPlay">🔁 Nghe lại</button>
-  <div><button id="fClear">Xếp lại</button><button id="fAuto" class="on">Tự động tiếp</button></div>
+  <button id="fPrev">◀</button><input id="fnum" inputmode="numeric"><button id="fNext">▶</button><button id="fPlay">🔁 再听听</button>
+  <div><button id="fClear">再来</button><button id="fAuto" class="on">自动继续</button></div>
 </div>
 <div class="dock" id="dTest">
   <button id="tPrev">◀</button><button id="tNext">▶</button>
@@ -96,11 +96,7 @@ const CONFIG = {
 };
 // contact chỉ để ghi chú cho giáo viên, có thể để trống
 const STUDENTS = [
-  { name: "TSai-YNYKJYC-021", contact: "" },
-  { name: "Xing-NLTV-018", contact: "" },
-  { name: "黄中-YNYKJYC-043", contact: "" },
-  { name: "乐毅-FYJC-012", contact: "" },
-  { name: "小陈-TVCS1-0304", contact: "" }
+  { name: "黄中-YNYKJYC-043", contact: "" }
 ];
 // ==================================
 

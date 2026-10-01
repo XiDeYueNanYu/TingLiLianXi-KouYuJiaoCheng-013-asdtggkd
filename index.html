@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luyện nghe tiếng Việt</title>
+<style>
+:root{--blue:#63a0d8;--line:#72a9db;--gold:#fed16a;--bg:#f7fbf3;--cream:#fffbef;--ok:#5ba346;--okbg:#B7D7AA;--bad:#CE6D5E;--badbg:#ffcccc;--orange:#FF6820}
+*{box-sizing:border-box}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;text-align:center;margin:0;padding-bottom:230px;background:var(--bg)}
+.box{width:95%;max-width:700px;margin:0 auto;border:2px solid var(--line);background:var(--blue);color:#fff;font-weight:bold}
+#title{min-height:90px;display:flex;align-items:center;justify-content:center;font-size:clamp(26px,5vw,44px);padding:8px}
+#bar{display:none;min-height:34px;color:#ffd300;padding:4px 12px;font-size:clamp(15px,2.5vw,19px);align-items:center;justify-content:space-between;gap:8px}
+button{padding:8px 12px;margin:2px 3px;cursor:pointer;border:2px solid var(--blue);background:var(--blue);color:var(--cream);font-size:22px;border-radius:5px}
+button.sm{font-size:15px;padding:4px 8px}
+button.on{border-color:var(--gold)}
+button:disabled{opacity:.5;pointer-events:none}
+.view{display:none;width:95%;max-width:700px;margin:15px auto}
+.item{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;margin:8px 0;padding:14px 18px;background:#fff;color:#1f4263;border:2px solid var(--blue);border-radius:12px;font-size:clamp(18px,3vw,24px);font-weight:bold;text-align:left;box-shadow:0 3px 6px rgba(0,0,0,.12)}
+.item small{font-weight:normal;color:#666;font-size:15px;display:block}
+.item.done{border-color:var(--ok);background:#f2faee}
+.tag{color:var(--ok);font-size:16px;white-space:nowrap}
+.hint{background:#ffffe0;border:3px solid var(--gold);border-radius:5px;padding:10px;font-size:clamp(18px,3vw,26px);min-height:50px;visibility:hidden;margin-bottom:12px}
+.zone{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;padding:14px;margin:12px 0;border-radius:5px}
+#fans{background:var(--cream);border:3px solid #ccc;min-height:90px;transition:all .4s}
+#fans.correct{background:var(--okbg);border-color:var(--ok)}
+#fans.wrong{background:var(--badbg);border-color:var(--bad)}
+.word{padding:8px 16px;background:#fff;border:2px solid var(--blue);border-radius:12px;font-size:clamp(26px,5vw,42px);cursor:pointer;user-select:none;box-shadow:0 3px 6px rgba(0,0,0,.15);min-width:56px}
+.word.used{opacity:.35;pointer-events:none}
+.word.inans{background:#ffd700}
+.msg{min-height:30px;font-size:22px;font-weight:bold}
+.opt{display:block;width:100%;margin:10px 0;padding:14px 16px;background:#fff;color:#1f4263;border:3px solid var(--blue);border-radius:12px;font-size:clamp(20px,4vw,30px);text-align:left}
+.opt.sel{background:#ffd700;border-color:var(--orange)}
+#tclock{font-size:30px;font-weight:bold;color:var(--orange);margin:6px 0}
+#tq{font-size:24px;font-weight:bold;color:#1f4263}
+.dock{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:95%;max-width:800px;background:var(--bg);padding:8px 0;z-index:10;display:none}
+#fnum{width:70px;height:34px;text-align:center;font-size:20px;border:2px solid var(--blue);border-radius:5px}
+#tnav{max-height:104px;overflow:auto;margin-top:6px}
+.dot{width:42px;height:42px;padding:0;margin:3px;border-radius:50%;background:#fff;color:var(--blue);font-size:18px;font-weight:bold}
+.dot.ans{background:var(--blue);color:#fff}
+.dot.cur{border:4px solid var(--orange)}
+#tdone{display:none;margin-top:16px;padding:12px;background:var(--cream);border:2px solid var(--orange);border-radius:10px}
+#tdone button{font-size:20px;background:var(--orange);border-color:var(--orange)}
+#smsg{font-size:20px;font-weight:bold;margin-top:8px}
+@media(max-width:768px){body{padding-bottom:210px}button{font-size:18px}}
+</style>
+</head>
+<body>
+<div id="title" class="box">Luyện nghe tiếng Việt<br>越南语听力练习</div>
+<div id="bar" class="box"><span id="who"></span><span><button class="sm" id="backBtn">◀ Quay lại</button><button class="sm" id="swapBtn">Đổi người</button></span></div>
+
+<section id="v-students" class="view"><h3>Chọn tên của bạn · 请选择你的名字</h3><div id="studentList"></div></section>
+<section id="v-lessons" class="view"><div id="lessonList">Đang tải...</div></section>
+<section id="v-menu" class="view"><h3 id="menuTitle"></h3>
+  <button class="item" id="goFree">🎧 Luyện tự do<small>Nghe và xếp từ thành câu</small></button>
+  <button class="item" id="goTest">📝 Bài tập<small>Nghe và chọn bản dịch tiếng Trung, có tính giờ</small></button></section>
+
+<section id="v-free" class="view">
+  <div class="hint" id="fzh"></div>
+  <div class="zone" id="fans"></div>
+  <div class="msg" id="fmsg"></div>
+  <div class="zone" id="fpool"></div>
+</section>
+
+<section id="v-test" class="view">
+  <div id="tclock">⏱ 00:00</div>
+  <div id="tq"></div>
+  <div style="margin:10px 0"><button id="tPlay">🔁 Nghe lại</button></div>
+  <div id="topts"></div>
+  <div id="tdone"><div id="tscore"></div><button id="sendBtn">Tải ảnh báo cáo và gửi kết quả luyện tập</button><button id="retryBtn" style="background:var(--blue);border-color:var(--blue)">Làm lại</button><div id="smsg"></div></div>
+</section>
+
+<div class="dock" id="dFree">
+  <button id="fPrev">◀</button><input id="fnum" inputmode="numeric"><button id="fNext">▶</button><button id="fPlay">🔁 Nghe lại</button>
+  <div><button id="fClear">Xếp lại</button><button id="fAuto" class="on">Tự động tiếp</button></div>
+</div>
+<div class="dock" id="dTest">
+  <button id="tPrev">◀</button><button id="tNext">▶</button>
+  <div id="tnav"></div>
+</div>
+
+<script>
+// ============ CẤU HÌNH ============
+const CONFIG = {
+  LESSONS_URL: "lessons.json",
+  // Thư mục chứa audio (repo riêng). Nên kết thúc bằng "/". jsDelivr thường truy cập được từ Trung Quốc hơn raw.githubusercontent.com
+  AUDIO_BASE_URL: "https://github.com/XiDeYueNanYu/LuyenNgheTiengViet-audio-data/",
+  SHOW_ZH_ALWAYS: false,          // true: luôn hiện bản dịch tiếng Trung | false: chỉ hiện khi đang phát audio
+  CORRECT_SOUND: "Dung.mp3",
+  WRONG_SOUND: "Sai.mp3",
+  VIKA: {
+    TOKEN: "uskLIB1kFYYlrNd9LKzRiSh",
+    DATASHEET_ID: "dstv3buuQLilXFq5td/viwWVe27xD1Lw",
+    FIELDS: { name: "MingZi", time: "TiJiaoShiJian", duration: "ZuoTiShiJian", lesson: "KeMing", score: "FenShu", json: "XiangXiJSon" }
+  }
+};
+// contact chỉ để ghi chú cho giáo viên, có thể để trống
+const STUDENTS = [
+  { name: "TSai-YNYKJYC-021", contact: "" },
+  { name: "Xing-NLTV-018", contact: "" },
+  { name: "黄中-YNYKJYC-043", contact: "" },
+  { name: "乐毅-FYJC-012", contact: "" },
+  { name: "小陈-TVCS1-0304", contact: "" }
+];
+// ==================================
+
+const $ = id => document.getElementById(id);
+const store = { get(k, d) { try { const v = JSON.parse(localStorage.getItem(k)); return v ?? d } catch (e) { return d } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)) } catch (e) {} } };
+const shuffle = a => { const r = [...a]; for (let i = r.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [r[i], r[j]] = [r[j], r[i]] } return r };
+const fmt = s => String(s / 60 | 0).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
+const aurl = f => /^(https?:)?\/\//.test(f) ? f : CONFIG.AUDIO_BASE_URL + f;
+const audio = new Audio(), sndOk = new Audio(CONFIG.CORRECT_SOUND), sndBad = new Audio(CONFIG.WRONG_SOUND);
+let student = null, lessons = [], lesson = null, seq = 0, cur = "students";
+
+function playA(a, src) {
+  return new Promise(res => {
+    const f = () => { a.removeEventListener("ended", f); a.removeEventListener("error", f); res() };
+    a.addEventListener("ended", f); a.addEventListener("error", f);
+    if (src) a.src = src;
+    a.currentTime = 0; a.play().catch(f);
+  });
+}
+const backMap = { lessons: "students", menu: "lessons", free: "menu", test: "menu" };
+function show(v) {
+  cur = v; seq++; audio.pause(); stopTimer();
+  document.querySelectorAll(".view").forEach(e => e.style.display = e.id === "v-" + v ? "block" : "none");
+  $("bar").style.display = student && v !== "students" ? "flex" : "none";
+  $("dFree").style.display = v === "free" ? "block" : "none";
+  $("dTest").style.display = v === "test" ? "block" : "none";
+  window.scrollTo(0, 0);
+}
+$("backBtn").onclick = () => show(backMap[cur] || "students");
+$("swapBtn").onclick = () => { student = null; store.set("student", ""); show("students") };
+
+// ---------- Chọn học sinh ----------
+function pickStudent(s) {
+  student = s; store.set("student", s.name);
+  $("who").textContent = "👤 " + s.name;
+  renderLessons(); show("lessons");
+}
+$("studentList").innerHTML = "";
+STUDENTS.forEach(s => { const b = document.createElement("button"); b.className = "item"; b.textContent = s.name; b.onclick = () => pickStudent(s); $("studentList").appendChild(b) });
+
+// ---------- Danh sách bài ----------
+function renderLessons() {
+  const done = store.get("done:" + student.name, {}), box = $("lessonList");
+  box.innerHTML = "";
+  if (!lessons.length) { box.textContent = "Chưa có bài học."; return }
+  [...lessons].reverse().forEach(l => {
+    const b = document.createElement("button");
+    b.className = "item" + (done[l.id] ? " done" : "");
+    b.innerHTML = `<span>${l.title}<small>${l.sentences.length} câu</small></span>` + (done[l.id] ? `<span class="tag">✅ ${done[l.id]}</span>` : "");
+    b.onclick = () => { lesson = l; $("menuTitle").textContent = l.title; show("menu") };
+    box.appendChild(b);
+  });
+}
+fetch(CONFIG.LESSONS_URL + "?t=" + Date.now()).then(r => r.json()).then(d => { lessons = d; if (student) renderLessons() })
+  .catch(() => $("lessonList").textContent = "Không tải được danh sách bài học.");
+
+// ---------- Luyện tự do ----------
+const F = { i: 0, words: [], pool: [], ans: [], auto: true };
+const tok = s => s.replace(/[\p{P}\p{S}]/gu, " ").split(/\s+/).filter(Boolean);
+function setZh(on) { $("fzh").style.visibility = CONFIG.SHOW_ZH_ALWAYS || on ? "visible" : "hidden" }
+async function freePlay() {
+  const my = seq, s = lesson.sentences[F.i];
+  setZh(true); await playA(audio, aurl(s.audio));
+  if (my === seq) setZh(false);
+}
+function freeLoad(i) {
+  const n = lesson.sentences.length; F.i = (i + n) % n; seq++;
+  const s = lesson.sentences[F.i];
+  F.words = tok(s.vi);
+  const t = F.words.map((w, k) => ({ w, k }));
+  let sh = shuffle(t);
+  if (t.length > 1 && sh.every((x, k) => x === t[k])) sh.reverse();
+  F.pool = sh; F.ans = [];
+  $("fzh").textContent = s.zh; $("fnum").value = F.i + 1; $("fmsg").textContent = "";
+  $("fans").className = "zone"; freeRender(); freePlay();
+}
+function freeRender() {
+  $("fpool").innerHTML = ""; $("fans").innerHTML = "";
+  F.pool.forEach(t => {
+    const d = document.createElement("div"); d.className = "word" + (F.ans.includes(t) ? " used" : ""); d.textContent = t.w;
+    d.onclick = () => { if (F.ans.length >= F.words.length) return; F.ans.push(t); $("fans").className = "zone"; $("fmsg").textContent = ""; freeRender(); if (F.ans.length === F.words.length) freeCheck() };
+    $("fpool").appendChild(d);
+  });
+  F.ans.forEach(t => {
+    const d = document.createElement("div"); d.className = "word inans"; d.textContent = t.w;
+    d.onclick = () => { F.ans.splice(F.ans.indexOf(t), 1); $("fans").className = "zone"; $("fmsg").textContent = ""; freeRender() };
+    $("fans").appendChild(d);
+  });
+}
+async function freeCheck() {
+  const ok = F.ans.map(t => t.w.toLowerCase()).join(" ") === F.words.join(" ").toLowerCase();
+  const my = ++seq;
+  $("fans").className = "zone " + (ok ? "correct" : "wrong");
+  $("fmsg").style.color = ok ? "var(--ok)" : "var(--bad)";
+  $("fmsg").textContent = ok ? "✔ Đúng rồi! 正确！" : "✘ Sai rồi, hãy xếp lại. 不对，请重排。";
+  await playA(ok ? sndOk : sndBad);
+  if (!ok || my !== seq) return;
+  seq++; const my2 = seq;
+  setZh(true); await playA(audio, aurl(lesson.sentences[F.i].audio));
+  if (my2 !== seq) return;
+  setZh(false);
+  if (F.auto) freeLoad(F.i + 1);
+}
+$("goFree").onclick = () => { show("free"); freeLoad(0) };
+$("fPrev").onclick = () => freeLoad(F.i - 1);
+$("fNext").onclick = () => freeLoad(F.i + 1);
+$("fPlay").onclick = () => { seq++; freePlay() };
+$("fClear").onclick = () => { F.ans = []; $("fans").className = "zone"; $("fmsg").textContent = ""; freeRender() };
+$("fAuto").onclick = () => { F.auto = !F.auto; $("fAuto").classList.toggle("on", F.auto) };
+$("fnum").onchange = () => { const n = parseInt($("fnum").value) - 1; if (n >= 0 && n < lesson.sentences.length) freeLoad(n); else $("fnum").value = F.i + 1 };
+
+// ---------- Bài tập ----------
+let T = null;
+function stopTimer() { if (T && T.iv) { clearInterval(T.iv); T.iv = null } }
+function makeOpts(s, S) {
+  const uniq = a => [...new Set(a)].filter(z => z !== s.zh);
+  let w = shuffle(uniq(S.map(x => x.zh)));
+  if (w.length < 2) w = w.concat(shuffle(uniq(lessons.filter(l => l !== lesson).flatMap(l => l.sentences.map(x => x.zh)))).filter(z => !w.includes(z)));
+  return shuffle([s.zh, ...w.slice(0, 2)]);
+}
+function testStart() {
+  const S = lesson.sentences;
+  show("test");
+  T = { i: 0, sec: 0, done: false, failed: false, t0: Date.now(), opts: S.map(s => makeOpts(s, S)), ans: S.map(() => null) };
+  $("tdone").style.display = "none"; $("smsg").textContent = ""; $("tclock").textContent = "⏱ 00:00";
+  T.iv = setInterval(() => { $("tclock").textContent = "⏱ " + fmt((Date.now() - T.t0) / 1000 | 0) }, 500);
+  $("tnav").innerHTML = "";
+  S.forEach((_, k) => { const b = document.createElement("button"); b.className = "dot"; b.textContent = k + 1; b.onclick = () => testShow(k); $("tnav").appendChild(b) });
+  testShow(0);
+}
+function testShow(i) {
+  const n = lesson.sentences.length; T.i = (i + n) % n; seq++;
+  $("tq").textContent = `Câu ${T.i + 1} / ${n}`;
+  $("topts").innerHTML = "";
+  T.opts[T.i].forEach(o => {
+    const b = document.createElement("button"); b.className = "opt" + (T.ans[T.i] === o ? " sel" : ""); b.textContent = o;
+    b.onclick = () => testPick(o); $("topts").appendChild(b);
+  });
+  testNav(); testPlay();
+}
+const testPlay = () => playA(audio, aurl(lesson.sentences[T.i].audio));
+function testNav() { [...$("tnav").children].forEach((b, k) => { b.className = "dot" + (T.ans[k] ? " ans" : "") + (k === T.i ? " cur" : "") }) }
+function testPick(o) {
+  T.ans[T.i] = o;
+  [...$("topts").children].forEach(b => b.classList.toggle("sel", b.textContent === o));
+  testNav();
+  if (!T.done && T.ans.every(Boolean)) {
+    T.done = true; stopTimer(); T.sec = Math.round((Date.now() - T.t0) / 1000);
+    const r = buildReport(true);
+    $("tscore").textContent = `Đã làm xong! Thời gian: ${fmt(T.sec)}`;
+    $("tdone").style.display = "block";
+    store.set("done:" + student.name, { ...store.get("done:" + student.name, {}), [lesson.id]: r.score });
+    $("tdone").scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+$("goTest").onclick = testStart;
+$("tPlay").onclick = () => { seq++; testPlay() };
+$("tPrev").onclick = () => testShow(T.i - 1);
+$("tNext").onclick = () => testShow(T.i + 1);
+$("retryBtn").onclick = testStart;
+
+function buildReport(quiet) {
+  const S = lesson.sentences;
+  const d = S.map((s, k) => ({ no: k + 1, vi: s.vi, correct: s.zh, chosen: T.ans[k], isCorrect: T.ans[k] === s.zh }));
+  return { student: student.name, lesson: lesson.title, lessonId: lesson.id, submittedAt: new Date().toISOString(), durationSeconds: T.sec, score: d.filter(x => x.isCorrect).length + "/" + S.length, details: d };
+}
+async function sendVika(r) {
+  const f = CONFIG.VIKA.FIELDS;
+  const res = await fetch(`https://api.vika.cn/fusion/v1/datasheets/${CONFIG.VIKA.DATASHEET_ID}/records`, {
+    method: "POST",
+    headers: { Authorization: "Bearer " + CONFIG.VIKA.TOKEN, "Content-Type": "application/json" },
+    body: JSON.stringify({ records: [{ fields: { [f.name]: r.student, [f.time]: r.submittedAt, [f.duration]: r.durationSeconds, [f.lesson]: r.lesson, [f.score]: r.score, [f.json]: JSON.stringify(r) } }] })
+  });
+  const j = await res.json();
+  if (!(res.ok && j.success)) throw new Error(j.message || "Không xác định");
+}
+$("sendBtn").onclick = async () => {
+  const btn = $("sendBtn"), msg = $("smsg"), r = buildReport();
+  btn.disabled = true; msg.style.color = "#1f4263"; msg.textContent = "⏳ Đang gửi...";
+  if (!T.failed) {
+    try { const a = document.createElement("a"); a.href = drawReport(r); a.download = `baocao_${r.student}_${r.lessonId}.png`.replace(/\s+/g, "_"); document.body.appendChild(a); a.click(); a.remove() } catch (e) { console.error(e) }
+  }
+  try {
+    await sendVika(r); T.failed = false;
+    msg.style.color = "var(--ok)"; msg.textContent = "✅ Đã tải ảnh và gửi kết quả cho giáo viên!";
+  } catch (e) {
+    T.failed = true; msg.style.color = "var(--bad)"; msg.textContent = "❌ Gửi lỗi: " + e.message + ". Hãy bấm gửi lại.";
+    btn.textContent = "Gửi lại kết quả";
+  }
+  btn.disabled = false;
+};
+
+// ---------- Vẽ ảnh báo cáo ----------
+function wrap(ctx, t, mw) {
+  const out = []; let line = "";
+  for (const tk of String(t).split(/(\s+)/)) {
+    if (ctx.measureText(line + tk).width <= mw) { line += tk; continue }
+    if (line.trim()) { out.push(line.trimEnd()); line = "" }
+    if (ctx.measureText(tk).width <= mw) { line = tk.trimStart(); continue }
+    for (const ch of tk) { if (ctx.measureText(line + ch).width > mw) { out.push(line); line = ch } else line += ch }
+  }
+  if (line) out.push(line);
+  return out;
+}
+function drawReport(r) {
+  const W = 900, P = 36, LH = 30, FM = 'Arial,"Microsoft YaHei",sans-serif';
+  const pct = Math.round(parseInt(r.score) / r.details.length * 100);
+  const run = (ctx, draw) => {
+    ctx.textBaseline = "top";
+    if (draw) { ctx.fillStyle = "#f7fbf3"; ctx.fillRect(0, 0, W, 1e5); ctx.fillStyle = "#63a0d8"; ctx.fillRect(0, 0, W, 130) }
+    const T1 = (t, x, y, font, color) => { ctx.font = font; ctx.fillStyle = color; if (draw) ctx.fillText(t, x, y) };
+    T1("Báo cáo luyện nghe 听力练习报告", P, 22, "bold 34px " + FM, "#fff");
+    ctx.font = "bold 24px " + FM; const lt = wrap(ctx, r.lesson, W - 2 * P)[0];
+    T1(lt, P, 72, "bold 24px " + FM, "#ffd300");
+    let y = 150;
+    const t = new Date(r.submittedAt).toLocaleString("vi-VN");
+    T1(`Học sinh: ${r.student}`, P, y, "24px " + FM, "#1f4263");
+    T1(`Gửi lúc: ${t}`, P, y + 36, "24px " + FM, "#1f4263");
+    T1(`Thời gian làm: ${fmt(r.durationSeconds)}`, P, y + 72, "24px " + FM, "#1f4263");
+    T1(`Điểm: ${r.score} (${pct}%)`, P, y + 108, "bold 34px " + FM, "#FF6820");
+    y += 170;
+    r.details.forEach(d => {
+      const segs = [[`${d.no}. ${d.vi}`, "bold 22px " + FM, "#1f4263"], [`Bạn chọn: ${d.chosen || "(chưa chọn)"}`, "20px " + FM, d.isCorrect ? "#3d7a2c" : "#b3412f"]];
+      if (!d.isCorrect) segs.push([`Đáp án đúng: ${d.correct}`, "20px " + FM, "#3d7a2c"]);
+      const lines = segs.map(([tx, f, c]) => { ctx.font = f; return wrap(ctx, tx, W - 2 * P - 90).map(l => [l, f, c]) }).flat();
+      const h = lines.length * LH + 20;
+      if (draw) {
+        ctx.fillStyle = d.isCorrect ? "#eaf5e4" : "#fdeaea"; ctx.fillRect(P, y, W - 2 * P, h);
+        ctx.fillStyle = d.isCorrect ? "#5ba346" : "#CE6D5E"; ctx.fillRect(P, y, 6, h);
+      }
+      lines.forEach(([l, f, c], k) => T1(l, P + 18, y + 10 + k * LH, f, c));
+      T1(d.isCorrect ? "✔" : "✘", W - P - 50, y + h / 2 - 20, "bold 36px " + FM, d.isCorrect ? "#5ba346" : "#CE6D5E");
+      y += h + 10;
+    });
+    return y + P;
+  };
+  const H = run(document.createElement("canvas").getContext("2d"), false);
+  const cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+  run(cv.getContext("2d"), true);
+  return cv.toDataURL("image/png");
+}
+
+// ---------- Khởi động ----------
+const saved = STUDENTS.find(s => s.name === store.get("student", ""));
+if (saved) pickStudent(saved); else show("students");
+</script>
+</body>
+</html>

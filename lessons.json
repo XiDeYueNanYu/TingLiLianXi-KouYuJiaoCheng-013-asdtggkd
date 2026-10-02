@@ -16,7 +16,7 @@
    {
     "audio": "thuwa_basc_basc_thawsng_cos_nhaf_khoong_aj.mp3",
     "vi": "Thưa bác, bác Thắng có nhà không ạ?",
-    "zh": "请问，胜大爷在家吗？"
+    "zh": "请问，阿胜伯伯在家吗？"
    },
    {
     "audio": "xin_hori_chij_mai_maasy_giowf_xe_xuaast_phast.mp3",
@@ -26,7 +26,7 @@
    {
     "audio": "xin_hori_quaafy_lafm_thur_tujc_owr_ddaau.mp3",
     "vi": "Xin hỏi, quầy làm thủ tục ở đâu?",
-    "zh": "请问，值机柜台在哪里？"
+    "zh": "请问，办手续柜台在哪里？"
    },
    {
     "audio": "cho_tooi_hori_nhaf_veej_sinh_owr_ddaau.mp3",
@@ -111,7 +111,7 @@
    {
     "audio": "cho_tooi_mua_moojt_ist_thuoosc_carm_soost.mp3",
     "vi": "Cho tôi mua một ít thuốc cảm sốt.",
-    "zh": "请给我买一些感冒药。"
+    "zh": "（让）我买一些感冒药。"
    },
    {
     "audio": "xin_anh_xuaast_trifnh_hooj_chieesu_vaf_ves_masy_bay.mp3",
@@ -126,12 +126,12 @@
    {
     "audio": "cho_tooi_ddoori_sang_moojt_chieesc_chawn_aasm_hown.mp3",
     "vi": "Cho tôi đổi sang một chiếc chăn ấm hơn.",
-    "zh": "请给我换一条更暖和的毯子。"
+    "zh": "请给我换一条更暖和的被子。"
    },
    {
     "audio": "anh_cho_tooi_guwri_xe.mp3",
     "vi": "Anh cho tôi gửi xe.",
-    "zh": "麻烦帮我停车。"
+    "zh": "我想停车。（“你让我停车”）"
    },
    {
     "audio": "tooi_muoosn_guwri_tieest_kieejm_kyf_hajn_6_thasng.mp3",
@@ -146,7 +146,7 @@
    {
     "audio": "em_xin_guwri_laji_anh_soos_tieefn_hoom_qua_em_ddax_muwowjn.mp3",
     "vi": "Em xin gửi lại anh số tiền hôm qua em đã mượn.",
-    "zh": "我把昨天借您的钱还给您。"
+    "zh": "我把昨天借你的钱还给你。"
    },
    {
     "audio": "cho_tooi_guwri_chifa_khosa_phofng.mp3",
@@ -156,7 +156,7 @@
    {
     "audio": "em_guwri_baso_caso_coong_vieejc_cho_giasm_ddoosc_nhes.mp3",
     "vi": "Em gửi báo cáo công việc cho giám đốc nhé.",
-    "zh": "我把工作报告发给经理了。"
+    "zh": "你把工作报告发给经理吧。"
    },
    {
     "audio": "anh_ddax_hojc_tieesng_vieejt_dduwowjc_bao_nhieeu_nawm_roofi.mp3",

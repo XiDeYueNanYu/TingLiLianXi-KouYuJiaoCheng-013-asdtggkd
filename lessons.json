@@ -1,7 +1,7 @@
 [
  {
   "id": "Bai-1",
-  "title": "Bài 1: Xin Chào",
+  "title": "第一课: 来河内",
   "sentences": [
    {
     "audio": "xin_looxi_anh_cos_bieest_phofng_hojp_soos_2_owr_ddaau_khoong.mp3",
@@ -187,6 +187,147 @@
     "audio": "em_thaasy_howi_lajnh_xin_chij_cho_em_muwowjn_casi_aso_khoasc.mp3",
     "vi": "Em thấy hơi lạnh, xin chị cho em mượn cái áo khoác.",
     "zh": "我觉得有点冷，请借我一件外套。"
+   }
+  ]
+ },
+ {
+  "id": "Bai-2",
+  "title": "第二课: 护照-签证",
+  "sentences": [
+   {
+    "audio": "cos_ddieefu_gif_chuwa_rox_veef_hoof_sow_em_cuws_goji_ddieejn_hori_tooi_nhes.mp3",
+    "vi": "Có điều gì chưa rõ về hồ sơ, em cứ gọi điện hỏi tôi nhé.",
+    "zh": "关于材料有什么不清楚的，你尽管打电话问我。"
+   },
+   {
+    "audio": "cuws_ddusng_8_giowf_sasng_laf_phofng_quarn_lys_xuaast_nhaajp_carnh_bawst_ddaafu_lafm_vieejc.mp3",
+    "vi": "Cứ đúng 8 giờ sáng là phòng quản lý xuất nhập cảnh bắt đầu làm việc.",
+    "zh": "每天早上八点整，出入境管理办公室就开始办公。"
+   },
+   {
+    "audio": "anh_cuws_lafm_theo_ddusng_huwowsng_daaxn_treen_towf_khai_laf_dduwowjc.mp3",
+    "vi": "Anh cứ làm theo đúng hướng dẫn trên tờ khai là được.",
+    "zh": "你按照申报表上的说明做就行了。"
+   },
+   {
+    "audio": "thaasy_thoong_tin_chisnh_xasc_roofi_thif_chij_cuws_kys_teen_vafo_ddown_nhes.mp3",
+    "vi": "Thấy thông tin chính xác rồi thì chị cứ ký tên vào đơn nhé.",
+    "zh": "看到信息准确无误了，您就在申请书上签字吧。"
+   },
+   {
+    "audio": "anh_cuws_yeen_taam_thur_tujc_ddoori_visa_khoong_quas_phuwsc_tajp_ddaau.mp3",
+    "vi": "Anh cứ yên tâm, thủ tục đổi visa không quá phức tạp đâu.",
+    "zh": "您放心，换签证的手续不太复杂。"
+   },
+   {
+    "audio": "anh_caafn_phari_thoong_baso_cho_cow_quan_coong_an_khi_thay_ddoori_ddija_chir_tajm_trus.mp3",
+    "vi": "Anh cần phải thông báo cho cơ quan công an khi thay đổi địa chỉ tạm trú.",
+    "zh": "更换暂住地址时，你需要通知公安机关。"
+   },
+   {
+    "audio": "hoof_sow_nafy_caafn_cos_theem_barn_sao_chuwsng_minh_thuw_nhaan_daan.mp3",
+    "vi": "Hồ sơ này cần có thêm bản sao chứng minh thư nhân dân.",
+    "zh": "这份材料还需要一份身份证复印件。"
+   },
+   {
+    "audio": "anh_chij_khoong_caafn_lo_lawsng_vif_thur_tujc_nafy_dduwowjc_xuwr_lys_raast_nhanh.mp3",
+    "vi": "Anh chị không cần lo lắng vì thủ tục này được xử lý rất nhanh.",
+    "zh": "你们不需要担心，因为这个手续办理得很快。"
+   },
+   {
+    "audio": "moji_thoong_tin_anh_khai_baso_trong_ddown_ddeefu_phari_ddusng_suwj_thaajt.mp3",
+    "vi": "Mọi thông tin anh khai báo trong đơn đều phải đúng sự thật.",
+    "zh": "你在申请书中申报的所有信息都必须真实准确。"
+   },
+   {
+    "audio": "chuyeesn_bay_ddeesn_vieejt_nam_khowri_hafnh_ddusng_9_giowf_sasng.mp3",
+    "vi": "Chuyến bay đến Việt Nam khởi hành đúng 9 giờ sáng.",
+    "zh": "飞往越南的航班准点上午九点起飞。"
+   },
+   {
+    "audio": "anh_caafn_mang_giaasy_chuwsng_nhaajn_suwsc_khore_ddeesn_noojp_taji_cow_quan_coong_an.mp3",
+    "vi": "Anh cần mang giấy chứng nhận sức khỏe đến nộp tại cơ quan công an.",
+    "zh": "你需要带上健康证明到公安机关提交。"
+   },
+   {
+    "audio": "hoof_sow_nafy_phari_dduwowjc_cow_quan_cos_thaarm_quyeefn_chuwsng_nhaajn_thif_mowsi_howjp_leej.mp3",
+    "vi": "Hồ sơ này phải được cơ quan có thẩm quyền chứng nhận thì mới hợp lệ.",
+    "zh": "这份材料必须经过有关部门认证才有效。"
+   },
+   {
+    "audio": "anh_neen_chuaarn_bij_hoof_sow_caarn_thaajn_kero_phari_ddi_laji_nhieefu_laafn.mp3",
+    "vi": "Anh nên chuẩn bị hồ sơ cẩn thận, kẻo phải đi lại nhiều lần.",
+    "zh": "你应该仔细准备材料，免得来回跑很多次。"
+   },
+   {
+    "audio": "bajn_nhows_noojp_leej_phis_ddusng_hajn_kero_bij_tisnh_theem_phis_treex_hajn.mp3",
+    "vi": "Bạn nhớ nộp lệ phí đúng hạn, kẻo bị tính thêm phí trễ hạn.",
+    "zh": "你记得按时缴纳费用，免得被加收逾期费。"
+   },
+   {
+    "audio": "caafn_giuwx_gifn_hooj_chieesu_caarn_thaajn_kero_lafm_maast_laji_maast_thowfi_gian_lafm_laji.mp3",
+    "vi": "Cần giữ gìn hộ chiếu cẩn thận, kẻo làm mất lại mất thời gian làm lại.",
+    "zh": "需要小心保管护照，免得弄丢了又要花时间补办。"
+   },
+   {
+    "audio": "anh_nhows_ddi_ddusng_giowf_hejn_kero_vawn_phofng_ddosng_cuwra_nghir_truwa.mp3",
+    "vi": "Anh nhớ đi đúng giờ hẹn, kẻo văn phòng đóng cửa nghỉ trưa.",
+    "zh": "你记得准时赴约，免得办公室午休关门。"
+   },
+   {
+    "audio": "tooi_muoosn_lafm_thur_tujc_caasp_laji_hooj_chieesu_phoor_thoong_bij_heest_hajn.mp3",
+    "vi": "Tôi muốn làm thủ tục cấp lại hộ chiếu phổ thông bị hết hạn.",
+    "zh": "我想办理过期普通护照的补发手续。"
+   },
+   {
+    "audio": "tooi_muoosn_xin_thij_thuwjc_du_lijch_sang_vieejt_nam_thowfi_hajn_moojt_thasng.mp3",
+    "vi": "Tôi muốn xin thị thực du lịch sang Việt Nam thời hạn một tháng.",
+    "zh": "我想申请一个月的赴越南旅游签证。"
+   },
+   {
+    "audio": "tooi_muoosn_xin_gia_hajn_tajm_trus_theem_ba_thasng_nuwxa.mp3",
+    "vi": "Tôi muốn xin gia hạn tạm trú thêm ba tháng nữa.",
+    "zh": "我想再申请延长暂住三个月。"
+   },
+   {
+    "audio": "tooi_muoosn_xin_kee_hosa_ddown_cho_khoarn_leej_phis_nafy.mp3",
+    "vi": "Tôi muốn xin kê hóa đơn cho khoản lệ phí này.",
+    "zh": "我想为这笔费用申请开具发票。"
+   },
+   {
+    "audio": "xin_anh_xuaast_trifnh_chuwsng_minh_thuw_nhaan_daan_vaf_hooj_chieesu_goosc.mp3",
+    "vi": "Xin anh xuất trình chứng minh thư nhân dân và hộ chiếu gốc.",
+    "zh": "请您出示身份证和护照原件。"
+   },
+   {
+    "audio": "xin_chij_ddieefn_ddaafy_ddur_thoong_tin_vafo_towf_khai_ddeef_nghij_caasp_thij_thuwjc_nafy.mp3",
+    "vi": "Xin chị điền đầy đủ thông tin vào tờ khai đề nghị cấp thị thực này.",
+    "zh": "请您在这份签证申请表上填写完整信息。"
+   },
+   {
+    "audio": "xin_quys_khasch_noojp_leej_phis_800_nghifn_ddoofng_taji_quaafy_thu_ngaan.mp3",
+    "vi": "Xin quý khách nộp lệ phí 800 nghìn đồng tại quầy thu ngân.",
+    "zh": "请各位旅客在收银台缴纳80万越南盾的费用。"
+   },
+   {
+    "audio": "bajn_phari_mang_casc_tafi_lieeju_theo_yeeu_caafu_ddeesn_coong_an_quaajn.mp3",
+    "vi": "Bạn phải mang các tài liệu theo yêu cầu đến công an quận.",
+    "zh": "你必须带上按要求准备的材料到郡公安局。"
+   },
+   {
+    "audio": "anh_phari_khai_baso_chi_tieest_thoong_tin_cas_nhaan_trong_towf_khai.mp3",
+    "vi": "Anh phải khai báo chi tiết thông tin cá nhân trong tờ khai.",
+    "zh": "你必须在申报表中详细申报个人信息。"
+   },
+   {
+    "audio": "tooi_muoosn_ddoori_visa_du_lijch_thafnh_visa_coong_tasc_ngawsn_hajn.mp3",
+    "vi": "Tôi muốn đổi visa du lịch thành visa công tác ngắn hạn.",
+    "zh": "我想把旅游签证换成短期工作签证。"
+   },
+   {
+    "audio": "tooi_muoosn_ddoori_visa_du_lijch_thafnh_visa_ddijnh_cuw_dafi_hajn.mp3",
+    "vi": "Tôi muốn đổi visa du lịch thành visa định cư dài hạn.",
+    "zh": "我想把旅游签证换成长期定居签证。"
    }
   ]
  }
